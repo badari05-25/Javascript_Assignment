@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.cont {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+}
+
+.card{
+    max-width: 400px;
+    background-color: #ced3fd !important;
+    color: #5670f8;
+    padding: 1rem;
+}
+
+.pl-16{
+    padding-left: 16rem;
+}

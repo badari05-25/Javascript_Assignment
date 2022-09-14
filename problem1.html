@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-5 ">
+      <div class="card cp1 ml-14">
+        <div class="card-body text-center">
+          <h4 class="fs-1"> Digital clock</h4>
+
+          <p id="p1" class="fs-3_5"></p>
+          <p id="date" class="fs-1"></p>
+
+          <button class="btn btn-light" onclick="startclock()">Start</button>
+          <button class="btn btn-light" onclick="stopclock()">Stop</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var today = new Date();
+
+    var date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+    document.getElementById("date").innerHTML = date;
+
+    function showTime() {
+      var clockTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', second: '2-digit'});
+      document.getElementById("p1").innerText = clockTime;
+    }
+    let myVar;
+    function startclock() {
+      myVar = setInterval(showTime, 1000);
+    }
+    function stopclock() {
+      clearInterval(myVar);
+    }
+  </script>
+</body>
+
+</html>
